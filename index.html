@@ -7,14 +7,14 @@
     <style>
       .conitainer {
         width: fit-content;
-        background-color: tomato;
         margin: 50px auto;
         position: relative;
       }
       .img {
-        width: 500px;
-        height: 300px;
+        width: 600px;
+        height: 400px;
         object-fit: cover;
+        border-radius: 20px;
       }
       .icon {
         height: 30px;
@@ -22,6 +22,7 @@
         cursor: pointer;
         transition: 0.5;
       }
+
       .backimg {
         height: 41px;
         left: 0;
@@ -31,6 +32,12 @@
         height: 35px;
         right: 0;
         top: 40%;
+      }
+      .backimg:hover {
+        transform: scale(0.8) translateX(-10px);
+      }
+      .nextimg:hover {
+        transform: scale(0.8) translateX(10px);
       }
     </style>
   </head>
