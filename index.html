@@ -17,35 +17,71 @@
         border-radius: 20px;
       }
       .icon {
-        height: 30px;
+        height: 35px;
         position: absolute;
         cursor: pointer;
         transition: 0.5;
+        top: 42%;
       }
 
       .backimg {
-        height: 41px;
+        height: 43px;
         left: 0;
-        top: 40%;
       }
       .nextimg {
         height: 35px;
         right: 0;
-        top: 40%;
       }
       .backimg:hover {
-        transform: scale(0.8) translateX(-10px);
+        transform: scale(0.9) translateX(-8px);
       }
       .nextimg:hover {
-        transform: scale(0.8) translateX(10px);
+        transform: scale(0.9) translateX(8px);
       }
     </style>
   </head>
   <body>
     <div class="conitainer">
-      <img src="./img/twolady.jpg" alt="twolady" class="img" />
-      <img src="./img/back.png" alt="back" class="icon backimg" />
-      <img src="./img/next.png" alt="next" class="icon nextimg" />
+      <img src="./img/twolady.jpg" alt="twolady" class="img" id="slide" />
+      <img
+        src="./img/back.png"
+        alt="back"
+        class="icon backimg"
+        onclick="back()"
+      />
+      <img
+        src="./img/next.png"
+        alt="next"
+        class="icon nextimg"
+        onclick="next()"
+      />
     </div>
+    <script>
+      const imgArray = [
+        "./img/twolady.jpg",
+        "./img/salain.webp",
+        "./img/drop.jpg",
+        "./img/doctorla.webp",
+        "./img/menheart.jpg",
+      ];
+      let index = 0;
+      const slide = document.getElementById("slide");
+      function next() {
+        if (index < imgArray.length - 1) {
+          index++;
+        } else {
+          index = 0;
+        }
+        slide.src = imgArray[index];
+      }
+      function back() {
+        if (index > 0) {
+          index--;
+        } else {
+          index = imgArray.length - 1;
+        }
+        slide.src = imgArray[index];
+      }
+    </script>
   </body>
 </html>
