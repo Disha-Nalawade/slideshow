@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div>
-        <img src="" alt="">
+    <style>
+      .conitainer {
+        width: fit-content;
+        background-color: tomato;
+        margin: 50px auto;
+        position: relative;
+      }
+      .img {
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+      }
+      .icon {
+        height: 30px;
+        position: absolute;
+        cursor: pointer;
+        transition: 0.5;
+      }
+      .backimg {
+        height: 41px;
+        left: 0;
+        top: 40%;
+      }
+      .nextimg {
+        height: 35px;
+        right: 0;
+        top: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conitainer">
+      <img src="./img/twolady.jpg" alt="twolady" class="img" />
+      <img src="./img/back.png" alt="back" class="icon backimg" />
+      <img src="./img/next.png" alt="next" class="icon nextimg" />
     </div>
-</body>
+  </body>
 </html>
